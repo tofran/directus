@@ -15,6 +15,7 @@ import { Url } from '../../utils/url';
 const liquidEngine = new Liquid({
 	root: [path.resolve(env.EXTENSIONS_PATH, 'templates'), path.resolve(__dirname, 'templates')],
 	extname: '.liquid',
+	outputEscape: 'escape',
 });
 
 export type EmailOptions = SendMailOptions & {
